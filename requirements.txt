@@ -6,3 +6,4 @@ pandas
 ephem
 xgboost
 category-encoders
+catboost

@@ -8,7 +8,7 @@ from datetime import datetime
 import ephem
 
 # ---------- Load files ----------
-model = joblib.load("model/catboost_model.pkl")
+model = joblib.load("model/xgb_model.pkl")
 encoder = joblib.load("model/encoder.pkl")
 with open("data/feature_medians.json") as f:
     feature_medians = json.load(f)

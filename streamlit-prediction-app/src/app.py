@@ -7,10 +7,18 @@ import os
 from datetime import datetime
 import ephem
 
-# ---------- Load files ----------
-model = joblib.load("model/xgb_model.pkl")
-encoder = joblib.load("model/encoder.pkl")
-with open("data/feature_medians.json") as f:
+# Get directory of app.py
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Paths inside src/
+MODEL_PATH = os.path.join(BASE_DIR, "model", "xgb_model.pkl")
+ENCODER_PATH = os.path.join(BASE_DIR, "model", "encoder.pkl")
+FEATURE_PATH = os.path.join(BASE_DIR, "data", "feature_medians.json")
+
+# Load files
+model = joblib.load(MODEL_PATH)
+encoder = joblib.load(ENCODER_PATH)
+with open(FEATURE_PATH) as f:
     feature_medians = json.load(f)
 
 # ---------- Helper Functions ----------

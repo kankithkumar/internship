@@ -11,7 +11,7 @@ import ephem
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Paths inside src/
-MODEL_PATH = os.path.join(BASE_DIR, "model", "catboost_model.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "model", "xgb_model.pkl")
 ENCODER_PATH = os.path.join(BASE_DIR, "model", "encoder.pkl")
 FEATURE_PATH = os.path.join(BASE_DIR, "data", "feature_medians.json")
 
